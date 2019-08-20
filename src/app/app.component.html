@@ -1,34 +1,87 @@
-<h3 class="first">Statistiche attuali</h3>
+<style type="text/css">
+label {
+  text-align: right;
+  width: 35px;
+  display: block;
+  float: left;
+  clear: left;
+  margin-right: 3px;
+  cursor: pointer
+}
+</style>
+
+<p>Attenzione: La tool attualmente funziona da 20 a 100. Inserire un numero sotto il 20 o superiore a 100 non farà effettuare il calcolo.</p>
 <div>
 <div class="ui-g ui-fluid">
     <div class="ui-g-12 ui-md-2">
+        <h3 class="first">Statistiche attuali</h3>
         <div class="ui-inputgroup">
-            <input type="number" value="21" [(ngModel)]="this.actualFor" pInputText placeholder="Forza" min="21" max="100" required>    
+            <label>For: </label>
+            <input type="number" [(ngModel)]="this.actualFor" pInputText placeholder="Forza" min="20" max="100">    
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-2">
+        <div class="ui-inputgroup">           
+            <label>Des: </label>
+            <input type="number" [(ngModel)]="this.actualDes" pInputText placeholder="Destrezza" min="20" max="100">         
         </div>
     </div>
     <div class="ui-g-12 ui-md-2">
         <div class="ui-inputgroup">
-            <input type="number" [(ngModel)]="this.actualDes" pInputText placeholder="Destrezza" min="21" max="100">         
+            <label>Cos: </label>
+            <input type="number" [(ngModel)]="this.actualCos" pInputText placeholder="Costituzione" min="20" max="100">         
         </div>
     </div>
     <div class="ui-g-12 ui-md-2">
         <div class="ui-inputgroup">
-            <input type="number" [(ngModel)]="this.actualCos" pInputText placeholder="Costituzione" min="21" max="100">         
+            <label>Sen: </label>
+            <input type="number" [(ngModel)]="this.actualSen" pInputText placeholder="Sensi" min="20" max="100">         
         </div>
     </div>
     <div class="ui-g-12 ui-md-2">
         <div class="ui-inputgroup">
-            <input type="number" [(ngModel)]="this.actualSen" pInputText placeholder="Sensi" min="21" max="100">         
-        </div>
-    </div>
-    <div class="ui-g-12 ui-md-2">
-        <div class="ui-inputgroup">
-            <img src="http://newworldgdr.org/grafica/vario/stats/spirito.png">
-            <input type="number" [(ngModel)]="this.actualSpi" pInputText placeholder="Spirito" min="21" max="100">         
+            <label>Spi: </label>
+            <input type="number" [(ngModel)]="this.actualSpi" pInputText placeholder="Spirito" min="20" max="100">         
         </div>
     </div>
 </div>
 
-<p-button label="Click" (onClick)="calcoloExp()"></p-button>
+
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-2">
+        <h3 class="first">Statistiche da raggiungere</h3>
+        <div class="ui-inputgroup">
+            <label>For: </label>
+            <input type="number" [(ngModel)]="this.futureFor" pInputText placeholder="Forza" min="20" max="100">    
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-2">
+        <div class="ui-inputgroup">           
+            <label>Des: </label>
+            <input type="number" [(ngModel)]="this.futureDes" pInputText placeholder="Destrezza" min="20" max="100">         
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-2">
+        <div class="ui-inputgroup">
+            <label>Cos: </label>
+            <input type="number" [(ngModel)]="this.futureCos" pInputText placeholder="Costituzione" min="20" max="100">         
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-2">
+        <div class="ui-inputgroup">
+            <label>Sen: </label>
+            <input type="number" [(ngModel)]="this.futureSen" pInputText placeholder="Sensi" min="20" max="100">         
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-2">
+        <div class="ui-inputgroup">
+            <label>Spi: </label>
+            <input type="number" [(ngModel)]="this.futureSpi" pInputText placeholder="Spirito" min="20" max="100">         
+        </div>
+    </div>
+</div>
+
+<br>
+<p-button label="Calcolo" (onClick)="calcoloExp()"></p-button>
 <p>Exp per raggiungere l'obiettivo: {{exp ? exp : ''}}</p>
 </div>
