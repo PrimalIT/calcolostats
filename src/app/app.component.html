@@ -26,6 +26,9 @@ img {
 h3 {
   clear: left;
 }
+#calcButton {
+  clear: left;
+}
 </style>
 
 <p>Attenzione: La tool attualmente funziona da 16 a 100. Inserire un numero sotto il 16 o superiore a 100 non farà effettuare il calcolo.</p>
@@ -94,39 +97,66 @@ h3 {
 <br>
 <h3 class="first">Statistiche da raggiungere</h3>
 <div class="ui-g ui-fluid">
-    <div class="ui-g-12 ui-md-2">
-        <div class="ui-inputgroup">
+    <div id="div-block">
+        <div id="primary">
             <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/forza.png?raw=true" /></label>
             <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureFor" pInputText placeholder="Forza" min="16" max="100">    
         </div>
+        <div id="secondary">
+            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/ambizione.png?raw=true" /></label>
+            <input type="number" [(ngModel)]="this.futureAmbizione" pInputText placeholder="Ambizione" min="16" max="100" disabled> 
+        </div>
     </div>
-    <div class="ui-g-12 ui-md-2">
-        <div class="ui-inputgroup">           
+    <div id="div-block">
+        <div id="primary">           
             <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/destrezza.png?raw=true" /></label>
             <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureDes" pInputText placeholder="Destrezza" min="16" max="100">         
         </div>
+        <div id="secondary">
+            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/velocita.png?raw=true" /></label>
+            <input type="number" [(ngModel)]="this.futureVelocita" pInputText placeholder="Velocità" min="16" max="100" disabled> 
+        </div>
     </div>
-    <div class="ui-g-12 ui-md-2">
-        <div class="ui-inputgroup">
+    <div id="div-block">
+        <div id="primary">
             <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/costituzione.png?raw=true" /></label>
             <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureCos" pInputText placeholder="Costituzione" min="16" max="100">         
         </div>
+        <div id="secondary">
+            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/mira.png?raw=true" /></label>
+            <input type="number" [(ngModel)]="this.futurePortata" pInputText placeholder="Portata" min="16" max="100" disabled> 
+        </div>
     </div>
-    <div class="ui-g-12 ui-md-2">
-        <div class="ui-inputgroup">
+    <div id="div-block">
+        <div id="primary">
             <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/sensi.png?raw=true" /></label>
             <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureSen" pInputText placeholder="Sensi" min="16" max="100">         
         </div>
+        <div id="secondary">
+            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/tempra.png?raw=true" /></label>
+            <input type="number" [(ngModel)]="this.futureApnea" pInputText placeholder="Apnea" min="16" max="100" disabled> 
+        </div>
     </div>
-    <div class="ui-g-12 ui-md-2">
-        <div class="ui-inputgroup">
+    <div id="div-block">
+        <div id="primary">
             <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/spirito.png?raw=true" /></label>
             <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureSpi" pInputText placeholder="Spirito" min="16" max="100">         
         </div>
+        <div id="secondary">
+            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true" /></label>
+            <input type="number" [(ngModel)]="this.futureSollevamento" pInputText placeholder="Sollevamento" min="16" max="100" disabled> 
+        </div>
+        <div id="secondary">
+            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/salto.png?raw=true" /></label>
+            <input type="number" [(ngModel)]="this.futureSalto" pInputText placeholder="Salto" min="16" max="100" disabled> 
+        </div>
+        <div id="secondary">
+            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/caduta.png?raw=true" /></label>
+            <input type="number" [(ngModel)]="this.futureCaduta" pInputText placeholder="Caduta" min="16" max="100" disabled> 
+        </div>
     </div>
 </div>
-
-<br>
-<p-button label="Calcolo" (onClick)="calcoloExp()"></p-button>
-<p>Exp per raggiungere l'obiettivo: {{exp ? exp : ''}}</p>
 </div>
+<br><br>
+<p-button id="calcButton" label="Calcolo" (onClick)="calcoloExp()"></p-button>
+<p>Exp per raggiungere l'obiettivo: {{exp ? exp : ''}}</p>

@@ -46,6 +46,14 @@ export class AppComponent  {
   actualSalto=Math.round((this.actualFor+this.actualDes)/12);
   actualCaduta=Math.round((this.actualFor+this.actualCos)/6);
 
+  futureAmbizione=Math.round((this.futureSpi+this.futureSpi+this.futureSen+this.futureCos)/4);
+  futureVelocita=Math.round((this.futureFor+this.futureFor+this.futureDes+this.futureDes+this.futureDes                                   +this.futureCos)/10);
+  futurePortata=Math.round((this.futureFor+this.futureDes+this.futureSen)/15);
+  futureApnea=Math.round((this.futureCos)/8);
+  futureSollevamento=Math.round(((this.futureFor*this.futureFor*this.futureCos)/(this.futureFor+                                  (this.futureCos/2))/3));
+  futureSalto=Math.round((this.futureFor+this.futureDes)/12);
+  futureCaduta=Math.round((this.futureFor+this.futureCos)/6);
+
   private calcoloSec(){
       this.actualAmbizione=Math.round((this.actualSpi+this.actualSpi+this.actualSen+this.actualCos)/4);
       this.actualVelocita=Math.round((this.actualFor+this.actualFor+this.actualDes+this.actualDes                                  +this.actualDes+this.actualCos)/10);
@@ -57,7 +65,13 @@ export class AppComponent  {
   }
 
   private calcoloSecFut(){
-    
+      this.futureAmbizione=Math.round((this.futureSpi+this.futureSpi+this.futureSen+this.futureCos)/4);
+      this.futureVelocita=Math.round((this.futureFor+this.futureFor+this.futureDes+this.futureDes                                  +this.futureDes+this.futureCos)/10);
+      this.futurePortata=Math.round((this.futureFor+this.futureDes+this.futureSen)/15);
+      this.futureApnea=Math.round((this.futureCos)/8);
+      this.futureSollevamento=Math.round(((this.futureFor*this.futureFor*this.futureCos)/(this.futureFor+                               (this.futureCos/2))/3));
+      this.futureSalto=Math.round((this.futureFor+this.futureDes)/12);
+      this.futureCaduta=Math.round((this.futureFor+this.futureCos)/6);
   }
 
   private calcoloExp(){
