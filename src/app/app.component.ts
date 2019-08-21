@@ -38,6 +38,19 @@ export class AppComponent  {
   futureSpi=this.start;
   exp;
 
+  actualAmbizione=Math.round((this.actualSpi+this.actualSpi+this.actualSen+this.actualCos)/4);
+  actualVelocita=Math.round((this.actualFor+this.actualFor+this.actualDes+this.actualDes+this.actualDes                                   +this.actualCos)/10);
+  actualPortata;
+  actualApnea;
+  actualSollevamento;
+  actualSalto;
+  actualCaduta;
+
+  private calcoloSec(){
+      this.actualAmbizione=Math.round((this.actualSpi+this.actualSpi+this.actualSen+this.actualCos)/4);
+      this.actualVelocita=Math.round((this.actualFor+this.actualFor+this.actualDes+this.actualDes                                  +this.actualDes+this.actualCos)/10);
+  }
+
   private calcoloExp(){
     this.exp=0;
     var appAct=this.actualFor-this.start;
