@@ -7,7 +7,8 @@ import {ButtonModule} from 'primeng/button';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  arrayExp=[3, 3, 3, 3, 0,
+  arrayExp=[2, 2, 2, 0,
+            3, 3, 3, 3, 0,
             3, 4, 4, 4, 0,
             5, 5, 5, 5, 0,
             5, 6, 6, 6, 0,
@@ -23,46 +24,47 @@ export class AppComponent  {
             24, 24, 24, 25, 0,
             30, 30, 30, 31, 0,
             31, 32, 32, 32, 0];
-  actualFor=20;
-  actualDes=20;
-  actualCos=20;
-  actualSen=20;
-  actualSpi=20;
-  futureFor=20;
-  futureDes=20;
-  futureCos=20;
-  futureSen=20;
-  futureSpi=20;
+  start=16;
+  actualFor=this.start;
+  actualDes=this.start;
+  actualCos=this.start;
+  actualSen=this.start;
+  actualSpi=this.start;
+  futureFor=this.start;
+  futureDes=this.start;
+  futureCos=this.start;
+  futureSen=this.start;
+  futureSpi=this.start;
   exp;
 
   private calcoloExp(){
     this.exp=0;
-    var appAct=this.actualFor-20;
-    var appFut=this.futureFor-20;
+    var appAct=this.actualFor-this.start;
+    var appFut=this.futureFor-this.start;
     while(appAct<appFut){
       this.exp=this.exp+this.arrayExp[appAct];
       appAct++;
     }
-    appAct=this.actualDes-20;
-    appFut=this.futureDes-20;
+    appAct=this.actualDes-this.start;
+    appFut=this.futureDes-this.start;
     while(appAct<appFut){
       this.exp=this.exp+this.arrayExp[appAct];
       appAct++;
     }
-    appAct=this.actualCos-20;
-    appFut=this.futureCos-20;
+    appAct=this.actualCos-this.start;
+    appFut=this.futureCos-this.start;
     while(appAct<appFut){
       this.exp=this.exp+this.arrayExp[appAct];
       appAct++;
     }
-    appAct=this.actualSen-20;
-    appFut=this.futureSen-20;
+    appAct=this.actualSen-this.start;
+    appFut=this.futureSen-this.start;
     while(appAct<appFut){
       this.exp=this.exp+this.arrayExp[appAct];
       appAct++;
     }
-    appAct=this.actualSpi-20;
-    appFut=this.futureSpi-20;
+    appAct=this.actualSpi-this.start;
+    appFut=this.futureSpi-this.start;
     while(appAct<appFut){
       this.exp=this.exp+this.arrayExp[appAct];
       appAct++;
