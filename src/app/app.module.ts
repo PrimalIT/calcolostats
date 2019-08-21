@@ -8,11 +8,10 @@ import {MenuItem} from 'primeng/api';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 
 @NgModule({
   imports:      [ BrowserModule, BrowserAnimationsModule, FormsModule, ButtonModule, AccordionModule],
-  declarations: [ AppComponent, HelloComponent ],
+  declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule {
