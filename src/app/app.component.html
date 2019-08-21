@@ -97,31 +97,31 @@ h3 {
     <div class="ui-g-12 ui-md-2">
         <div class="ui-inputgroup">
             <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/forza.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureFor" pInputText placeholder="Forza" min="16" max="100">    
+            <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureFor" pInputText placeholder="Forza" min="16" max="100">    
         </div>
     </div>
     <div class="ui-g-12 ui-md-2">
         <div class="ui-inputgroup">           
             <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/destrezza.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureDes" pInputText placeholder="Destrezza" min="16" max="100">         
+            <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureDes" pInputText placeholder="Destrezza" min="16" max="100">         
         </div>
     </div>
     <div class="ui-g-12 ui-md-2">
         <div class="ui-inputgroup">
             <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/costituzione.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureCos" pInputText placeholder="Costituzione" min="16" max="100">         
+            <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureCos" pInputText placeholder="Costituzione" min="16" max="100">         
         </div>
     </div>
     <div class="ui-g-12 ui-md-2">
         <div class="ui-inputgroup">
             <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/sensi.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureSen" pInputText placeholder="Sensi" min="16" max="100">         
+            <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureSen" pInputText placeholder="Sensi" min="16" max="100">         
         </div>
     </div>
     <div class="ui-g-12 ui-md-2">
         <div class="ui-inputgroup">
             <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/spirito.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureSpi" pInputText placeholder="Spirito" min="16" max="100">         
+            <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureSpi" pInputText placeholder="Spirito" min="16" max="100">         
         </div>
     </div>
 </div>

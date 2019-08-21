@@ -40,15 +40,24 @@ export class AppComponent  {
 
   actualAmbizione=Math.round((this.actualSpi+this.actualSpi+this.actualSen+this.actualCos)/4);
   actualVelocita=Math.round((this.actualFor+this.actualFor+this.actualDes+this.actualDes+this.actualDes                                   +this.actualCos)/10);
-  actualPortata;
-  actualApnea;
-  actualSollevamento;
-  actualSalto;
-  actualCaduta;
+  actualPortata=Math.round((this.actualFor+this.actualDes+this.actualSen)/15);
+  actualApnea=Math.round((this.actualCos)/8);
+  actualSollevamento=Math.round(((this.actualFor*this.actualFor*this.actualCos)/(this.actualFor+                                  (this.actualCos/2))/3));
+  actualSalto=Math.round((this.actualFor+this.actualDes)/12);
+  actualCaduta=Math.round((this.actualFor+this.actualCos)/6);
 
   private calcoloSec(){
       this.actualAmbizione=Math.round((this.actualSpi+this.actualSpi+this.actualSen+this.actualCos)/4);
       this.actualVelocita=Math.round((this.actualFor+this.actualFor+this.actualDes+this.actualDes                                  +this.actualDes+this.actualCos)/10);
+      this.actualPortata=Math.round((this.actualFor+this.actualDes+this.actualSen)/15);
+      this.actualApnea=Math.round((this.actualCos)/8);
+      this.actualSollevamento=Math.round(((this.actualFor*this.actualFor*this.actualCos)/(this.actualFor+                               (this.actualCos/2))/3));
+      this.actualSalto=Math.round((this.actualFor+this.actualDes)/12);
+      this.actualCaduta=Math.round((this.actualFor+this.actualCos)/6);
+  }
+
+  private calcoloSecFut(){
+    
   }
 
   private calcoloExp(){
