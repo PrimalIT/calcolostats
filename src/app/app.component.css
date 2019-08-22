@@ -1,0 +1,92 @@
+*{
+  text-align: center;
+  margin: 0 auto 0 auto;
+  box-sizing: border-box;
+}
+label {
+  text-align: right;
+  width: 35px;
+  display: block;
+  float: left;
+  clear: left;
+  margin-right: 3px;
+  margin-bottom: 2px;
+  cursor: pointer
+}
+input {
+  margin-bottom: 2px;
+  width: 35px;
+}
+img {
+  vertical-align: middle;
+}
+#div-block {
+  text-align: center;
+  clear: left;
+}
+#primary, #secondary {
+  display: inline;
+  float: left;
+}
+h3 {
+  clear: left;
+}
+#calcButton {
+  text-align: center;
+}
+.tratteggioscheda {
+    border: 2px dashed #8f4625;
+}
+.fontscheda {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-stretch: condensed;
+    text-shadow: #FF9933;
+}
+fieldset{
+  padding-bottom: 3px;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+.no-padding-right {
+  padding-right: 1px;
+}
+.col-xs-5 {
+  width: 41.66666667%;
+}
+.col-xs-6{
+  width: 35%;
+  float: middle;
+}
+.col-xs-5, .col-xs-7{
+  float: left;
+}
+.col-xs-5, .col-xs-7, .col-xs-6{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+table{
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.no-padding-left {
+    padding-left: 1px;
+}
+.col-xs-7 {
+    width: 58.33333333%;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.scheda-pg-container {
+    min-width: 600px;
+    max-width: 600px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}

@@ -1,182 +1,213 @@
-<style type="text/css">
-label {
-  text-align: right;
-  width: 35px;
-  display: block;
-  float: left;
-  clear: left;
-  margin-right: 3px;
-  margin-bottom: 2px;
-  cursor: pointer
-}
-input {
-  margin-bottom: 2px;
-}
-img {
-  vertical-align: middle;
-}
-#div-block {
-  text-align: center;
-  clear: left;
-}
-#primary, #secondary {
-  display: inline;
-  float: left;
-}
-h3 {
-  clear: left;
-}
-#calcButton {
-  clear: left;
-}
-</style>
-
-<p>Attenzione: La tool attualmente funziona da 16 a 100. Inserire un numero sotto il 16 o superiore a 100 non farà effettuare il calcolo.</p>
+<p>Attenzione: La tool attualmente funziona da 16 a 100. Inserire un numero sotto il 16 o superiore a 100 non farà effettuare
+	il calcolo.</p>
 <div>
-<div class="ui-g ui-fluid">
-  <h3 class="first">Statistiche attuali</h3>
-    <div id="div-block">
-        <div id="primary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/forza.png?raw=true" /></label>
-            <input type="number" (keyup)="calcoloSec()" [(ngModel)]="this.actualFor" pInputText placeholder="Forza" min="16" max="100">    
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/ambizione.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.actualAmbizione" pInputText placeholder="Ambizione" min="16" max="100" disabled> 
-        </div>
-    </div>
-    <div id="div-block">
-        <div id="primary">           
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/destrezza.png?raw=true" /></label>
-            <input type="number" (keyup)="calcoloSec()" [(ngModel)]="this.actualDes" pInputText placeholder="Destrezza" min="16" max="100">         
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/velocita.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.actualVelocita" pInputText placeholder="Velocità" min="16" max="100" disabled> 
-        </div>
-    </div>
-    <div id="div-block">
-        <div id="primary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/costituzione.png?raw=true" /></label>
-            <input type="number" (keyup)="calcoloSec()" [(ngModel)]="this.actualCos" pInputText placeholder="Costituzione" min="16" max="100">         
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/mira.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.actualPortata" pInputText placeholder="Portata" min="16" max="100" disabled> 
-        </div>
-    </div>
-    <div id="div-block">
-        <div id="primary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/sensi.png?raw=true" /></label>
-            <input type="number" (keyup)="calcoloSec()" [(ngModel)]="this.actualSen" pInputText placeholder="Sensi" min="16" max="100">         
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/tempra.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.actualApnea" pInputText placeholder="Apnea" min="16" max="100" disabled> 
-        </div>
-    </div>
-    <div id="div-block">
-        <div id="primary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/spirito.png?raw=true" /></label>
-            <input type="number" (keyup)="calcoloSec()" [(ngModel)]="this.actualSpi" pInputText placeholder="Spirito" min="16" max="100">         
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.actualSollevamento" pInputText placeholder="Sollevamento" min="16" max="100" disabled> 
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/salto.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.actualSalto" pInputText placeholder="Salto" min="16" max="100" disabled> 
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/caduta.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.actualCaduta" pInputText placeholder="Caduta" min="16" max="100" disabled> 
-        </div>
-    </div>
-    <div id="div-block">
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/like.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.actualVita" pInputText placeholder="Vita" min="16" max="100" disabled>         
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/flash.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.actualEnergia" pInputText placeholder="Energia" min="16" max="100" disabled> 
-        </div>
-    </div>
+<h3 class="first">Statistiche attuali</h3>
+<div class="scheda-pg-container tabellascheda table">
+<div class="row">
+<div class="col-xs-5 no-padding-right">
+  <fieldset class="tratteggioscheda">
+  <legend class="fontscheda">Parametri Principali Attuali</legend>
+	<table class="fontscheda" style="width: 85%;">
+		<tbody>
+			<tr>
+				<td>
+					<img class="center" border="0" title="Forza" src="https://github.com/PrimalIT/calcolostats/blob/master/img/forza.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Destrezza" src="https://github.com/PrimalIT/calcolostats/blob/master/img/destrezza.png?raw=true" />
+        </td>
+        <td>
+          <img class="center" border="0" title="Costituzione" src="https://github.com/PrimalIT/calcolostats/blob/master/img/costituzione.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Sensi" src="https://github.com/PrimalIT/calcolostats/blob/master/img/sensi.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Spirito" src="https://github.com/PrimalIT/calcolostats/blob/master/img/spirito.png?raw=true">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="number" (keyup)="calcoloSec()" [(ngModel)]="this.actualFor" pInputText placeholder="Forza" min="16" max="100"></td>
+        <td><input type="number" (keyup)="calcoloSec()" [(ngModel)]="this.actualDes" pInputText placeholder="Destrezza" min="16" max="100"></td>
+        <td><input type="number" (keyup)="calcoloSec()" [(ngModel)]="this.actualCos" pInputText placeholder="Costituzione" min="16" max="100"></td>
+        <td><input type="number" (keyup)="calcoloSec()" [(ngModel)]="this.actualSen" pInputText placeholder="Sensi" min="16" max="100"></td>
+        <td><input type="number" (keyup)="calcoloSec()" [(ngModel)]="this.actualSpi" pInputText placeholder="Spirito" min="16" max="100"></td>
+      </tr>
+    </tbody>
+  </table>
+  </fieldset>
+</div>
+<div class="col-xs-7 no-padding-left">
+  <fieldset class="tratteggioscheda">
+  <legend class="fontscheda">Parametri Secondari Attuali</legend>
+	<table class="fontscheda" style="width: 85%;">
+		<tbody>
+			<tr>
+				<td>
+					<img class="center" border="0" title="Ambizione" src="https://github.com/PrimalIT/calcolostats/blob/master/img/ambizione.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Velocità" src="https://github.com/PrimalIT/calcolostats/blob/master/img/velocita.png?raw=true" />
+        </td>
+        <td>
+          <img class="center" border="0" title="Portata" src="https://github.com/PrimalIT/calcolostats/blob/master/img/mira.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Apnea" src="https://github.com/PrimalIT/calcolostats/blob/master/img/tempra.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Sollevamento" src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Salto" src="https://github.com/PrimalIT/calcolostats/blob/master/img/salto.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Sollevamento" src="https://github.com/PrimalIT/calcolostats/blob/master/img/caduta.png?raw=true">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="number" [(ngModel)]="this.actualAmbizione" pInputText placeholder="Ambizione" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.actualVelocita" pInputText placeholder="Velocità" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.actualPortata" pInputText placeholder="Portata" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.actualApnea" pInputText placeholder="Apnea" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.actualSollevamento" pInputText placeholder="Sollevamento" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.actualSalto" pInputText placeholder="Salto" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.actualCaduta" pInputText placeholder="Caduta" min="16" max="100" disabled></td>
+      </tr>
+    </tbody>
+  </table>
+  </fieldset>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-6 no-padding-right">
+  <fieldset class="tratteggioscheda">
+  <legend class="fontscheda">Parametri Vitali Attuali</legend>
+	<table class="fontscheda" style="width: 85%;">
+		<tbody>
+			<tr>
+				<td>
+					<img class="center" border="0" title="Vita" src="https://github.com/PrimalIT/calcolostats/blob/master/img/like.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Energia" src="https://github.com/PrimalIT/calcolostats/blob/master/img/flash.png?raw=true" />
+        </td>
+      </tr>
+      <tr>
+        <td><input type="number" [(ngModel)]="this.actualVita" pInputText placeholder="Vita" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.actualEnergia" pInputText placeholder="Energia" min="16" max="100" disabled></td>
+      </tr>
+    </tbody>
+  </table>
+  </fieldset>
+  </div>
+</div>
 </div>
 <br>
 <h3 class="first">Statistiche da raggiungere</h3>
-<div class="ui-g ui-fluid">
-    <div id="div-block">
-        <div id="primary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/forza.png?raw=true" /></label>
-            <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureFor" pInputText placeholder="Forza" min="16" max="100">    
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/ambizione.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureAmbizione" pInputText placeholder="Ambizione" min="16" max="100" disabled> 
-        </div>
-    </div>
-    <div id="div-block">
-        <div id="primary">           
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/destrezza.png?raw=true" /></label>
-            <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureDes" pInputText placeholder="Destrezza" min="16" max="100">         
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/velocita.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureVelocita" pInputText placeholder="Velocità" min="16" max="100" disabled> 
-        </div>
-    </div>
-    <div id="div-block">
-        <div id="primary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/costituzione.png?raw=true" /></label>
-            <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureCos" pInputText placeholder="Costituzione" min="16" max="100">         
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/mira.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futurePortata" pInputText placeholder="Portata" min="16" max="100" disabled> 
-        </div>
-    </div>
-    <div id="div-block">
-        <div id="primary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/sensi.png?raw=true" /></label>
-            <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureSen" pInputText placeholder="Sensi" min="16" max="100">         
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/tempra.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureApnea" pInputText placeholder="Apnea" min="16" max="100" disabled> 
-        </div>
-    </div>
-    <div id="div-block">
-        <div id="primary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/spirito.png?raw=true" /></label>
-            <input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureSpi" pInputText placeholder="Spirito" min="16" max="100">         
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureSollevamento" pInputText placeholder="Sollevamento" min="16" max="100" disabled> 
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/salto.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureSalto" pInputText placeholder="Salto" min="16" max="100" disabled> 
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/caduta.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureCaduta" pInputText placeholder="Caduta" min="16" max="100" disabled> 
-        </div>
-    <div id="div-block">
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/like.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureVita" pInputText placeholder="Vita" min="16" max="100" disabled>         
-        </div>
-        <div id="secondary">
-            <label><img src="https://github.com/PrimalIT/calcolostats/blob/master/img/flash.png?raw=true" /></label>
-            <input type="number" [(ngModel)]="this.futureEnergia" pInputText placeholder="Energia" min="16" max="100" disabled> 
-        </div>
-    </div>
-    </div>
+<div class="scheda-pg-container tabellascheda table">
+<div class="row">
+<div class="col-xs-5 no-padding-right">
+  <fieldset class="tratteggioscheda">
+  <legend class="fontscheda">Parametri Principali Futuri</legend>
+	<table class="fontscheda" style="width: 85%;">
+		<tbody>
+			<tr>
+				<td>
+					<img class="center" border="0" title="Forza" src="https://github.com/PrimalIT/calcolostats/blob/master/img/forza.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Destrezza" src="https://github.com/PrimalIT/calcolostats/blob/master/img/destrezza.png?raw=true" />
+        </td>
+        <td>
+          <img class="center" border="0" title="Costituzione" src="https://github.com/PrimalIT/calcolostats/blob/master/img/costituzione.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Sensi" src="https://github.com/PrimalIT/calcolostats/blob/master/img/sensi.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Spirito" src="https://github.com/PrimalIT/calcolostats/blob/master/img/spirito.png?raw=true">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureFor" pInputText placeholder="Forza" min="16" max="100"></td>
+        <td><input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureDes" pInputText placeholder="Destrezza" min="16" max="100"></td>
+        <td><input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureCos" pInputText placeholder="Costituzione" min="16" max="100"></td>
+        <td><input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureSen" pInputText placeholder="Sensi" min="16" max="100"></td>
+        <td><input type="number" (keyup)="calcoloSecFut()" [(ngModel)]="this.futureSpi" pInputText placeholder="Spirito" min="16" max="100"></td>
+      </tr>
+    </tbody>
+  </table>
+  </fieldset>
+</div>
+<div class="col-xs-7 no-padding-left">
+  <fieldset class="tratteggioscheda">
+  <legend class="fontscheda">Parametri Secondari Futuri</legend>
+	<table class="fontscheda" style="width: 85%;">
+		<tbody>
+			<tr>
+				<td>
+					<img class="center" border="0" title="Ambizione" src="https://github.com/PrimalIT/calcolostats/blob/master/img/ambizione.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Velocità" src="https://github.com/PrimalIT/calcolostats/blob/master/img/velocita.png?raw=true" />
+        </td>
+        <td>
+          <img class="center" border="0" title="Portata" src="https://github.com/PrimalIT/calcolostats/blob/master/img/mira.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Apnea" src="https://github.com/PrimalIT/calcolostats/blob/master/img/tempra.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Sollevamento" src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Salto" src="https://github.com/PrimalIT/calcolostats/blob/master/img/salto.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Sollevamento" src="https://github.com/PrimalIT/calcolostats/blob/master/img/caduta.png?raw=true">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="number" [(ngModel)]="this.futureAmbizione" pInputText placeholder="Ambizione" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.futureVelocita" pInputText placeholder="Velocità" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.futurePortata" pInputText placeholder="Portata" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.futureApnea" pInputText placeholder="Apnea" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.futureSollevamento" pInputText placeholder="Sollevamento" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.futureSalto" pInputText placeholder="Salto" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.futureCaduta" pInputText placeholder="Caduta" min="16" max="100" disabled></td>
+      </tr>
+    </tbody>
+  </table>
+  </fieldset>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-6 no-padding-right">
+  <fieldset class="tratteggioscheda">
+  <legend class="fontscheda">Parametri Vitali Futuri</legend>
+	<table class="fontscheda" style="width: 85%;">
+		<tbody>
+			<tr>
+				<td>
+					<img class="center" border="0" title="Vita" src="https://github.com/PrimalIT/calcolostats/blob/master/img/like.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Energia" src="https://github.com/PrimalIT/calcolostats/blob/master/img/flash.png?raw=true" />
+        </td>
+      </tr>
+      <tr>
+        <td><input type="number" [(ngModel)]="this.futureVita" pInputText placeholder="Vita" min="16" max="100" disabled></td>
+        <td><input type="number" [(ngModel)]="this.futureEnergia" pInputText placeholder="Energia" min="16" max="100" disabled></td>
+      </tr>
+    </tbody>
+  </table>
+  </fieldset>
+  </div>
+</div>
 </div>
 </div>
 <br><br>
+
 <p-button id="calcButton" label="Calcolo" (onClick)="calcoloExp()"></p-button>
 <p>Exp per raggiungere l'obiettivo: {{exp ? exp : ''}}</p>
