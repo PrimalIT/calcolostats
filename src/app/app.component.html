@@ -208,6 +208,9 @@
 </div>
 </div>
 <br><br>
-
-<p-button id="calcButton" label="Calcolo" (onClick)="calcoloExp()"></p-button>
+<div>
+<a href="javascript:void(0);" (click)="calcoloExp()">
+  <input id="calcButton" type="image" src="https://github.com/PrimalIT/calcolostats/blob/master/img/invia.png?raw=true" />
+</a>
+</div>
 <p>Exp per raggiungere l'obiettivo: {{exp ? exp : ''}}</p>
