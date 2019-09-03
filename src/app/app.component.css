@@ -84,6 +84,9 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+input[type=number] {
+    -moz-appearance:textfield;
+}
 .scheda-pg-container {
     min-width: 600px;
     max-width: 600px;
