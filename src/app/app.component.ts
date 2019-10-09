@@ -91,7 +91,7 @@ export class AppComponent  {
   }
 
   private calcoloExp(){
-    this.exp=0;
+    this.exp=0; //test
     var appAct=this.actualFor-this.start;
     var appFut=this.futureFor-this.start;
     while(appAct<appFut){
