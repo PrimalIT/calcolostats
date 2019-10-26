@@ -1,6 +1,6 @@
 <body>
-<p>Attenzione: La tool attualmente funziona da 16 a 140. Inserire un numero sotto il 16 o superiore a 140 non farà effettuare
-	il calcolo.</p>
+<p>Attenzione: La tool attualmente funziona da 16 a 140. Inserire un numero sotto il 16 o superiore a 140 non farà effettuare il calcolo.</p>
+<p>INFO: Le attuali icone potrebbero essere quelle non ufficiali.</p>
 <div class="sfondo">
 	<h3 class="first">Statistiche attuali</h3>
 	<div class="scheda-pg-container tabellascheda table">
@@ -48,7 +48,7 @@
 					<img class="center" border="0" title="Ambizione" src="https://github.com/PrimalIT/calcolostats/blob/master/img/ambizione.png?raw=true">
         </td>
         <td>
-          <img class="center" border="0" title="Velocità" src="https://github.com/PrimalIT/calcolostats/blob/master/img/velocita.png?raw=true" />
+          <img class="center" border="0" title="Mobilità" src="https://github.com/PrimalIT/calcolostats/blob/master/img/velocita.png?raw=true" />
         </td>
         <td>
           <img class="center" border="0" title="Portata" src="https://github.com/PrimalIT/calcolostats/blob/master/img/mira.png?raw=true">
@@ -57,23 +57,27 @@
           <img class="center" border="0" title="Apnea" src="https://github.com/PrimalIT/calcolostats/blob/master/img/tempra.png?raw=true">
         </td>
         <td>
-          <img class="center" border="0" title="Sollevamento" src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true">
-        </td>
-        <td>
           <img class="center" border="0" title="Salto" src="https://github.com/PrimalIT/calcolostats/blob/master/img/salto.png?raw=true">
         </td>
         <td>
           <img class="center" border="0" title="Sollevamento" src="https://github.com/PrimalIT/calcolostats/blob/master/img/caduta.png?raw=true">
         </td>
+        <td>
+          <img class="center" border="0" title="Potenza Fisica" src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Potenza Spirituale" src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true">
+        </td>
       </tr>
       <tr>
         <td><input type="number" [(ngModel)]="this.actualAmbizione" pInputText placeholder="Ambizione" min="16" max="100" disabled></td>
-        <td><input type="number" [(ngModel)]="this.actualVelocita" pInputText placeholder="Velocità" min="16" max="140" disabled></td>
+        <td><input type="number" [(ngModel)]="this.actualMobilita" pInputText placeholder="Mobilità" min="16" max="140" disabled></td>
         <td><input type="number" [(ngModel)]="this.actualPortata" pInputText placeholder="Portata" min="16" max="140" disabled></td>
         <td><input type="number" [(ngModel)]="this.actualApnea" pInputText placeholder="Apnea" min="16" max="140" disabled></td>
-        <td><input type="number" [(ngModel)]="this.actualSollevamento" pInputText placeholder="Sollevamento" min="16" max="140" disabled></td>
         <td><input type="number" [(ngModel)]="this.actualSalto" pInputText placeholder="Salto" min="16" max="140" disabled></td>
         <td><input type="number" [(ngModel)]="this.actualCaduta" pInputText placeholder="Caduta" min="16" max="140" disabled></td>
+        <td><input type="number" [(ngModel)]="this.actualPotenzaFisica" pInputText placeholder="Potenza Fisica" min="16" max="140" disabled></td>
+        <td><input type="number" [(ngModel)]="this.actualPotenzaSpirituale" pInputText placeholder="Potenza Spirituale" min="16" max="140" disabled></td>
       </tr>
     </tbody>
   </table>
@@ -160,23 +164,27 @@
           <img class="center" border="0" title="Apnea" src="https://github.com/PrimalIT/calcolostats/blob/master/img/tempra.png?raw=true">
         </td>
         <td>
-          <img class="center" border="0" title="Sollevamento" src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true">
-        </td>
-        <td>
           <img class="center" border="0" title="Salto" src="https://github.com/PrimalIT/calcolostats/blob/master/img/salto.png?raw=true">
         </td>
         <td>
-          <img class="center" border="0" title="Sollevamento" src="https://github.com/PrimalIT/calcolostats/blob/master/img/caduta.png?raw=true">
+          <img class="center" border="0" title="Caduta" src="https://github.com/PrimalIT/calcolostats/blob/master/img/caduta.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Potenza Fisica" src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true">
+        </td>
+        <td>
+          <img class="center" border="0" title="Potenza Spirituale" src="https://github.com/PrimalIT/calcolostats/blob/master/img/sollevamento.png?raw=true">
         </td>
       </tr>
       <tr>
         <td><input type="number" [(ngModel)]="this.futureAmbizione" pInputText placeholder="Ambizione" min="16" max="140" disabled></td>
-        <td><input type="number" [(ngModel)]="this.futureVelocita" pInputText placeholder="Velocità" min="16" max="140" disabled></td>
+        <td><input type="number" [(ngModel)]="this.futureMobilita" pInputText placeholder="Velocità" min="16" max="140" disabled></td>
         <td><input type="number" [(ngModel)]="this.futurePortata" pInputText placeholder="Portata" min="16" max="140" disabled></td>
         <td><input type="number" [(ngModel)]="this.futureApnea" pInputText placeholder="Apnea" min="16" max="140" disabled></td>
-        <td><input type="number" [(ngModel)]="this.futureSollevamento" pInputText placeholder="Sollevamento" min="16" max="140" disabled></td>
         <td><input type="number" [(ngModel)]="this.futureSalto" pInputText placeholder="Salto" min="16" max="140" disabled></td>
         <td><input type="number" [(ngModel)]="this.futureCaduta" pInputText placeholder="Caduta" min="16" max="140" disabled></td>
+        <td><input type="number" [(ngModel)]="this.futurePotenzaFisica" pInputText placeholder="Potenza Fisica" min="16" max="140" disabled></td>
+        <td><input type="number" [(ngModel)]="this.futurePotenzaSpirituale" pInputText placeholder="Potenza Spirituale" min="16" max="140" disabled></td>
       </tr>
     </tbody>
   </table>

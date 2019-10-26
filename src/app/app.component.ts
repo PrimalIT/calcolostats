@@ -46,48 +46,56 @@ export class AppComponent  {
   futureSpi=this.start;
   exp;
 
-  actualAmbizione=Math.round((this.actualSpi+this.actualSpi+this.actualSen+this.actualCos)/4);
-  actualVelocita=Math.round((this.actualFor+this.actualFor+this.actualDes+this.actualDes+this.actualDes+this.actualCos)/10);
+  actualAmbizione=this.calcoloAmbizione(this.actualSpi, this.actualSen);
+  actualMobilita=this.actualDes-this.actualCos;
   actualPortata=Math.round((this.actualFor+this.actualDes+this.actualSen)/15);
-  actualApnea=Math.round((this.actualCos)/8);
+  actualApnea=Math.round((this.actualCos)/10);
   actualSollevamento=Math.round(((this.actualFor*this.actualFor*this.actualCos)/(this.actualFor+(this.actualCos/2))/3));
   actualSalto=Math.round((this.actualFor+this.actualDes)/12);
   actualCaduta=Math.round((this.actualFor+this.actualCos)/6);
   actualVita=Math.round(100+(((this.actualFor+this.actualDes+this.actualCos+this.actualSen+this.actualSpi)/5)+((this.actualFor+this.actualCos)*1.25)/2)/2);
   actualEnergia=Math.round(100+(((this.actualFor+this.actualDes+this.actualCos+this.actualSen+this.actualSpi)/5)+((this.actualDes+this.actualSen+this.actualSpi)*1.25)/3)/2);
+  actualPotenzaFisica=Math.round((this.actualFor+this.actualCos)/40);
+  actualPotenzaSpirituale=Math.round((this.actualSpi+this.actualCos)/40);
 
-  futureAmbizione=Math.round((this.futureSpi+this.futureSpi+this.futureSen+this.futureCos)/4);
-  futureVelocita=Math.round((this.futureFor+this.futureFor+this.futureDes+this.futureDes+this.futureDes                                   +this.futureCos)/10);
+  futureAmbizione=this.calcoloAmbizione(this.futureSpi, this.futureSen);
+  futureMobilita=this.futureDes-this.futureCos;
   futurePortata=Math.round((this.futureFor+this.futureDes+this.futureSen)/15);
-  futureApnea=Math.round((this.futureCos)/8);
+  futureApnea=Math.round((this.futureCos)/10);
   futureSollevamento=Math.round(((this.futureFor*this.futureFor*this.futureCos)/(this.futureFor+                                  (this.futureCos/2))/3));
   futureSalto=Math.round((this.futureFor+this.futureDes)/12);
   futureCaduta=Math.round((this.futureFor+this.futureCos)/6);
   futureVita=Math.round(100+(((this.futureFor+this.futureDes+this.futureCos+this.futureSen+this.futureSpi)/5)+((this.futureFor+this.futureCos)*1.25)/2)/2);
   futureEnergia=Math.round(100+(((this.futureFor+this.futureDes+this.futureCos+this.futureSen+this.futureSpi)/5)+((this.futureDes+this.futureSen+this.futureSpi)*1.25)/3)/2);
+  futurePotenzaFisica=Math.round((this.futureFor+this.futureCos)/40);
+  futurePotenzaSpirituale=Math.round((this.futureSpi+this.futureCos)/40);
 
   private calcoloSec(){
-      this.actualAmbizione=Math.round((this.actualSpi+this.actualSpi+this.actualSen+this.actualCos)/4);
-      this.actualVelocita=Math.round((this.actualFor+this.actualFor+this.actualDes+this.actualDes                                  +this.actualDes+this.actualCos)/10);
+      this.actualAmbizione=this.calcoloAmbizione(this.actualSpi, this.actualSen);
+      this.actualMobilita=this.actualDes-this.actualCos;
       this.actualPortata=Math.round((this.actualFor+this.actualDes+this.actualSen)/15);
-      this.actualApnea=Math.round((this.actualCos)/8);
-      this.actualSollevamento=Math.round(((this.actualFor*this.actualFor*this.actualCos)/(this.actualFor+                               (this.actualCos/2))/3));
+      this.actualApnea=Math.round((this.actualCos)/10);
+      this.actualSollevamento=Math.round(((this.actualFor*this.actualFor*this.actualCos)/(this.actualFor+(this.actualCos/2))/3));
       this.actualSalto=Math.round((this.actualFor+this.actualDes)/12);
       this.actualCaduta=Math.round((this.actualFor+this.actualCos)/6);
       this.actualVita=Math.round(100+(((this.actualFor+this.actualDes+this.actualCos+this.actualSen+this.actualSpi)/5)+((this.actualFor+this.actualCos)*1.25)/2)/2);
       this.actualEnergia=Math.round(100+(((this.actualFor+this.actualDes+this.actualCos+this.actualSen+this.actualSpi)/5)+((this.actualDes+this.actualSen+this.actualSpi)*1.25)/3)/2);
+      this.actualPotenzaFisica=Math.round((this.actualFor+this.actualCos)/40);
+      this.actualPotenzaSpirituale=Math.round((this.actualSpi+this.actualCos)/40);
   }
 
   private calcoloSecFut(){
-      this.futureAmbizione=Math.round((this.futureSpi+this.futureSpi+this.futureSen+this.futureCos)/4);
-      this.futureVelocita=Math.round((this.futureFor+this.futureFor+this.futureDes+this.futureDes                                  +this.futureDes+this.futureCos)/10);
+      this.futureAmbizione=this.calcoloAmbizione(this.futureSpi, this.futureSen);
+      this.futureMobilita=this.futureDes-this.futureCos;
       this.futurePortata=Math.round((this.futureFor+this.futureDes+this.futureSen)/15);
-      this.futureApnea=Math.round((this.futureCos)/8);
-      this.futureSollevamento=Math.round(((this.futureFor*this.futureFor*this.futureCos)/(this.futureFor+                               (this.futureCos/2))/3));
+      this.futureApnea=Math.round((this.futureCos)/10);
+      this.futureSollevamento=Math.round(((this.futureFor*this.futureFor*this.futureCos)/(this.futureFor+                                  (this.futureCos/2))/3));
       this.futureSalto=Math.round((this.futureFor+this.futureDes)/12);
       this.futureCaduta=Math.round((this.futureFor+this.futureCos)/6);
       this.futureVita=Math.round(100+(((this.futureFor+this.futureDes+this.futureCos+this.futureSen+this.futureSpi)/5)+((this.futureFor+this.futureCos)*1.25)/2)/2);
       this.futureEnergia=Math.round(100+(((this.futureFor+this.futureDes+this.futureCos+this.futureSen+this.futureSpi)/5)+((this.futureDes+this.futureSen+this.futureSpi)*1.25)/3)/2);
+      this.futurePotenzaFisica=Math.round((this.futureFor+this.futureCos)/40);
+      this.futurePotenzaSpirituale=Math.round((this.futureSpi+this.futureCos)/40);
   }
 
   private calcoloExp(){
@@ -122,5 +130,12 @@ export class AppComponent  {
       this.exp=this.exp+this.arrayExp[appAct];
       appAct++;
     }
+  }
+
+  private calcoloAmbizione(spi, sen){
+    var ambizione = Math.round((spi+spi+sen)/3);
+    var app=Math.round((ambizione*20)/100);
+    ambizione=ambizione+app;
+    return ambizione;
   }
 }
