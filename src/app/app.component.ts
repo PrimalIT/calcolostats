@@ -32,7 +32,7 @@ export class AppComponent  {
             60, 60, 61, 61, 0, //121-125
             62, 63, 63, 64, 0, //126-130
             65, 65, 66, 66, 0, //131-135
-            67, 68, 68, 69, 0];
+            67, 68, 68, 69, 0]; //136-140
   start=16;
   actualFor=this.start;
   actualDes=this.start;
@@ -46,7 +46,7 @@ export class AppComponent  {
   futureSpi=this.start;
   exp;
 
-  actualAmbizione=this.calcoloAmbizione(this.actualSpi, this.actualSen);
+  actualAmbizione=this.calcoloAmbizione(this.actualSpi, this.actualSen, this.actualCos, this.actualDes, this.actualFor);
   actualMobilita=this.actualDes-this.actualCos;
   actualPortata=Math.round((this.actualFor+this.actualDes+this.actualSen)/15);
   actualApnea=Math.round((this.actualCos)/10);
@@ -58,7 +58,7 @@ export class AppComponent  {
   actualPotenzaFisica=Math.round((this.actualFor+this.actualCos)/40);
   actualPotenzaSpirituale=Math.round((this.actualSpi+this.actualCos)/40);
 
-  futureAmbizione=this.calcoloAmbizione(this.futureSpi, this.futureSen);
+  futureAmbizione=this.calcoloAmbizione(this.futureSpi, this.futureSen, this.futureCos, this.futureDes, this.futureFor);
   futureMobilita=this.futureDes-this.futureCos;
   futurePortata=Math.round((this.futureFor+this.futureDes+this.futureSen)/15);
   futureApnea=Math.round((this.futureCos)/10);
@@ -71,7 +71,7 @@ export class AppComponent  {
   futurePotenzaSpirituale=Math.round((this.futureSpi+this.futureCos)/40);
 
   private calcoloSec(){
-      this.actualAmbizione=this.calcoloAmbizione(this.actualSpi, this.actualSen);
+      this.actualAmbizione=this.calcoloAmbizione(this.actualSpi, this.actualSen, this.actualCos, this.actualDes, this.actualFor);
       this.actualMobilita=this.actualDes-this.actualCos;
       this.actualPortata=Math.round((this.actualFor+this.actualDes+this.actualSen)/15);
       this.actualApnea=Math.round((this.actualCos)/10);
@@ -85,7 +85,7 @@ export class AppComponent  {
   }
 
   private calcoloSecFut(){
-      this.futureAmbizione=this.calcoloAmbizione(this.futureSpi, this.futureSen);
+      this.futureAmbizione=this.calcoloAmbizione(this.futureSpi, this.futureSen, this.futureCos, this.futureDes, this.futureFor);
       this.futureMobilita=this.futureDes-this.futureCos;
       this.futurePortata=Math.round((this.futureFor+this.futureDes+this.futureSen)/15);
       this.futureApnea=Math.round((this.futureCos)/10);
@@ -132,8 +132,8 @@ export class AppComponent  {
     }
   }
 
-  private calcoloAmbizione(spi, sen){
-    var ambizione = Math.round((spi+spi+sen)/3);
+  private calcoloAmbizione(spi, sen, cos, des, forz){
+    var ambizione = Math.round((spi+spi+spi+spi+spi+sen+cos+des+forz)/9);
     var app=Math.round((ambizione*20)/100);
     ambizione=ambizione+app;
     return ambizione;
